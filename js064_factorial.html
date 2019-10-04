@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8"/>
+	<meta lang="es">
+	<meta name="description" content="Control HTML y CSS3"> 
+	<meta name="description" content="Free Web tutorials">
+  	<meta name="keywords" content="HTML,CSS,XML,JavaScript">
+  	<meta name="author" content="Juan Carlos">
+	<title>Factorial de un número</title>
+	
+	<script type="text/javascript">
+		var numIntro;
+		var continuar=true;
+		var valorMax=100;
+		var valorMin=1;
+		
+		do {
+			var factorial=1;
+
+			numIntro=parseInt(prompt('introduce un  número entre 1 y 100 \n'));
+			if (isNaN(numIntro) || numIntro > valorMax || numIntro < valorMin) {
+				alert(`${numIntro} no es un número válido  \n`);
+			} else {
+				document.write(`descomposición del factorial ${numIntro}  <br>`);
+				for(i=1; i<=numIntro; i++) {
+					factorial*=i;
+					document.write(`${i} - ${factorial} <br>`)
+				}
+			}	
+			alert(`factorial de ${numIntro} es ${factorial}`);
+			continuar=confirm(`¿quieres seguir probando? `);
+		} while (continuar)			
+	</script>
+</head>
+<body>
+
+</body>
+</html>
